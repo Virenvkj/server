@@ -8,7 +8,7 @@ const myServer = http.createServer((req, res) => {
     fs.appendFile('log.txt', logtext, (err) => { });
    
     const parsedUrl = url.parse(req.url, true);
-    console.log(parsedUrl);
+    console.log(req);
 
     if (req.url === '/favicon.ico') {
         res.end();
